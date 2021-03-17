@@ -44,14 +44,14 @@
                                     <div class="project-item design ideas">
                                         <div class="projects-box">
                                             <div class="projects-thumbnail">
-                                                <a href="#">
+                                                <a href="https://www.t-mobile.com" target="_blank">
                                                     <img src="images/cliente1.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="portfolio-info ">
-                                                <a class="overlay" href="#"></a>                                
+                                                <a class="overlay" href="https://www.t-mobile.com" target="_blank"></a>                                
                                                 <div class="portfolio-info-inner">
-                                                    <h5><a href="#">Cliente 1</a></h5>
+                                                    <h5><a href="https://www.t-mobile.com" target="_blank">Cliente 1</a></h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -59,14 +59,14 @@
                                     <div class="project-item design ideas">
                                         <div class="projects-box">
                                             <div class="projects-thumbnail">
-                                                <a href="#">
+                                                <a href="https://google.com" target="_blank">
                                                     <img src="images/cliente2.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="portfolio-info ">
-                                                <a class="overlay" href="#"></a>                                
+                                                <a class="overlay" href="https://google.com" target="_blank"></a>                                
                                                 <div class="portfolio-info-inner">
-                                                    <h5><a href="#">Cliente 2</a></h5>
+                                                    <h5><a href="https://google.com" target="_blank">Cliente 2</a></h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -74,14 +74,14 @@
                                     <div class="project-item design ideas">
                                         <div class="projects-box">
                                             <div class="projects-thumbnail">
-                                                <a href="#">
+                                                <a href="https://www.disney.com" target="_blank">
                                                     <img src="images/cliente3.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="portfolio-info ">
-                                                <a class="overlay" href="#"></a>                                
+                                                <a class="overlay" href="https://www.disney.com" target="_blank"></a>                                
                                                 <div class="portfolio-info-inner">
-                                                    <h5><a href="#">Cliente 3</a></h5>
+                                                    <h5><a href="https://www.disney.com" target="_blank">Cliente 3</a></h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -89,14 +89,14 @@
                                     <div class="project-item design ideas">
                                         <div class="projects-box">
                                             <div class="projects-thumbnail">
-                                                <a href="#">
+                                                <a href="https://www.coca-cola.com/" target="_blank">
                                                     <img src="images/cliente4.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="portfolio-info ">
-                                                <a class="overlay" href="#"></a>                                
+                                                <a class="overlay" href="https://www.coca-cola.com/" target="_blank"></a>                                
                                                 <div class="portfolio-info-inner">
-                                                    <h5><a href="#">Cliente 4</a></h5>
+                                                    <h5><a href="https://www.coca-cola.com/" target="_blank">Cliente 4</a></h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -104,14 +104,14 @@
                                     <div class="project-item design ideas">
                                         <div class="projects-box">
                                             <div class="projects-thumbnail">
-                                                <a href="#">
+                                                <a href="https://apple.com" target="_blank">
                                                     <img src="images/cliente5.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="portfolio-info ">
-                                                <a class="overlay" href="#"></a>                                
+                                                <a class="overlay" href="https://apple.com" target="_blank"></a>                                
                                                 <div class="portfolio-info-inner">
-                                                    <h5><a href="#">Cliente 5</a></h5>
+                                                    <h5><a href="https://apple.com" target="_blank">Cliente 5</a></h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -119,14 +119,14 @@
                                     <div class="project-item design ideas">
                                         <div class="projects-box">
                                             <div class="projects-thumbnail">
-                                                <a href="#">
+                                                <a href="https://amazon.com" target="_blank">
                                                     <img src="images/cliente6.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="portfolio-info ">
-                                                <a class="overlay" href="#"></a>                                
+                                                <a class="overlay" href="https://amazon.com" target="_blank"></a>                                
                                                 <div class="portfolio-info-inner">
-                                                    <h5><a href="#">Cliente 6</a></h5>
+                                                    <h5><a href="https://amazon.com" target="_blank">Cliente 6</a></h5>
                                                 </div>
                                             </div>
                                         </div>

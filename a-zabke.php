@@ -108,59 +108,65 @@
                     </div>
                 </section>
 
-                <section class="padding-half bg-light-1">
+                <section class="bg-light-1">
                     <div class="container">
                         <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <div class="ot-heading">
-                                <span>// A Zabke</span>
-                                <h2 class="main-heading">Veja abaixo alguns <br>de nossos clientes</h2>
+                            <div class="col-md-8 text-center text-md-left mb-4 mb-md-0">
+                                <div class="ot-heading mb-0">
+                                    <span>// clientes</span>
+                                    <h2 class="main-heading">Confira alguns de nossos clientes</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center text-md-right align-self-end">
+                                <div class="ot-button">
+                                    <a href="clientes.php" class="octf-btn octf-btn-primary">Ver Mais</a>
+                                </div>
+                                <div class="space-10"></div>
                             </div>
                         </div>
-                    </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="partners">
                                     <div class="owl-carousel owl-theme home-client-carousel">
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://www.t-mobile.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
-                                                    <img class="partners-slide-image" src="images/client1.svg" alt="">
+                                                    <img class="partners-slide-image" src="images/cliente1.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://google.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
-                                                    <img class="partners-slide-image" src="images/client2.svg" alt="">
+                                                    <img class="partners-slide-image" src="images/cliente2.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://www.disney.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
-                                                    <img class="partners-slide-image" src="images/client3.svg" alt="">
+                                                    <img class="partners-slide-image" src="images/cliente3.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://www.coca-cola.com/" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
-                                                    <img class="partners-slide-image" src="images/client4.png" alt="">
+                                                    <img class="partners-slide-image" src="images/cliente4.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://apple.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
-                                                    <img class="partners-slide-image" src="images/client5.svg" alt="">
+                                                    <img class="partners-slide-image" src="images/cliente5.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://amazon.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
-                                                    <img class="partners-slide-image" src="images/client6.svg" alt="">
+                                                    <img class="partners-slide-image" src="images/cliente6.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>

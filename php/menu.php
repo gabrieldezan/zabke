@@ -30,7 +30,7 @@
                     <div class="octf-mainbar-row octf-row">
                         <div class="octf-col logo-col">
                             <div id="site-logo" class="site-logo">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <img src="images/logo-black.png" alt="Engitech" class="">
                                 </a>
                             </div>
@@ -100,7 +100,7 @@
         <div class="container">
             <div class="mlogo_wrapper clearfix">
                 <div class="mobile_logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="images/logo-black.png" alt="Engitech">
                     </a>
                 </div>

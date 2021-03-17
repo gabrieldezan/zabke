@@ -245,42 +245,42 @@
                                 <div class="partners">
                                     <div class="owl-carousel owl-theme home-client-carousel">
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://www.t-mobile.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
                                                     <img class="partners-slide-image" src="images/cliente1.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://google.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
                                                     <img class="partners-slide-image" src="images/cliente2.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://www.disney.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
                                                     <img class="partners-slide-image" src="images/cliente3.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://www.coca-cola.com/" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
                                                     <img class="partners-slide-image" src="images/cliente4.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://apple.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
                                                     <img class="partners-slide-image" src="images/cliente5.jpg" alt="">
                                                 </figure>                             
                                             </a>
                                         </div>
                                         <div class="partners-slide">
-                                            <a href="#" class="client-logo">
+                                            <a href="https://amazon.com" target="_blank" class="client-logo">
                                                 <figure class="partners-slide-inner">
                                                     <img class="partners-slide-image" src="images/cliente6.jpg" alt="">
                                                 </figure>                             
