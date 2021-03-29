@@ -108,7 +108,7 @@
                                      data-paddingtop="[0,0,0,0]"
                                      data-paddingright="[0,0,0,0]"
                                      data-paddingbottom="[0,0,0,0]"
-                                     data-paddingleft="[0,0,0,0]"><a href="solucao.php" class="octf-btn octf-btn-primary btn-slider btn-large">Ver mais</a>
+                                     data-paddingleft="[0,0,0,0]"><a href="app.php" class="octf-btn octf-btn-primary btn-slider btn-large">Ver mais</a>
                                 </div>  
                             </li>  
 
@@ -196,26 +196,26 @@
                             <div class="col-md-12">
                                 <div class="ot-heading text-center text-white">
                                     <span>// SERVIÇOS</span>
-                                    <h2 class="main-heading">Veja abaixo<br>nossos serviços</h2>
+                                    <h2 class="main-heading">Veja abaixo <br>nossos serviços</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="space-15"></div>
                         <div class="row justify-content-center">
                             <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                                <a class="tech-box text-center" href="solucao.php">
+                                <a class="tech-box text-center" href="app.php">
                                     <div class="icon-main"><span class="flaticon-app"></span></div>
                                     <h5>App</h5>
                                 </a>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                                <a class="tech-box text-center" href="solucao.php">
+                                <a class="tech-box text-center" href="web.php">
                                     <div class="icon-main"><span class="flaticon-code-1"></span></div>
                                     <h5>Sistema WA</h5>
                                 </a>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                                <a class="tech-box text-center" href="solucao.php">
+                                <a class="tech-box text-center" href="web.php">
                                     <div class="icon-main"><span class="flaticon-code-2"></span></div>
                                     <h5>Sistema WP</h5>
                                 </a>

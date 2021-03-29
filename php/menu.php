@@ -3,14 +3,14 @@
         <div class="octf-area-wrap">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-8 col-md-8">
                         <ul class="topbar-info">
                             <li><i class="fas fa-envelope"></i><a href="mailto:comercial2@webassist.com.br"> comercial2@webassist.com.br</a></li>
                             <li><i class="fas fa-envelope"></i><a href="mailto:suporte3@webassist.com.br"> suporte3@webassist.com.br</a></li>
                             <li><i class="fas fa-clock"></i> Seg - Sáb: 8:00 - 18:00</li>
                         </ul>
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-lg-4 col-md-4 text-right">
                         <div class="topbar-right">
                             <ul class="social-list">
                                 <li><a href="http://facebook.com/zabketecnologia" target="_blank"><i class="fab fa-facebook"></i></a></li>
@@ -42,9 +42,9 @@
                                     <li><a href="a-zabke.php">A Zabke</a></li>
                                     <li class="menu-item-has-children"><a class="cursor-pointer">Soluções</a>
                                         <ul class="sub-menu">
-                                            <li><a href="solucao.php">App</a></li>
-                                            <li><a href="solucao.php">Sistema WA</a></li>
-                                            <li><a href="solucao.php">Sistema WP</a></li>
+                                            <li><a href="app.php">App</a></li>
+                                            <li><a href="web.php">Sistema WA</a></li>
+                                            <li><a href="web.php">Sistema WP</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="clientes.php">Clientes</a></li>
@@ -115,9 +115,9 @@
                         <li><a href="a-zabke.php">A Zabke</a></li>
                         <li class="menu-item-has-children"><a class="cursor-pointer">Soluções</a>
                             <ul class="sub-menu">
-                                <li><a href="solucao.php">App</a></li>
-                                <li><a href="solucao.php">Sistema WA</a></li>
-                                <li><a href="solucao.php">Sistema WP</a></li>
+                                <li><a href="app.php">App</a></li>
+                                <li><a href="web.php">Sistema WA</a></li>
+                                <li><a href="web.php">Sistema WP</a></li>
                             </ul>
                         </li>
                         <li><a href="clientes.php">Clientes</a></li>

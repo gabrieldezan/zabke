@@ -103,7 +103,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="offset-xl-1 col-xl-6 col-lg-6 split-right-img"></div>
+                            <div class="offset-xl-1 col-xl-6 col-lg-6 split-right-img">
+                                <img src="images/missao-visao-valores.jpg">
+                            </div>
                         </div>
                     </div>
                 </section>

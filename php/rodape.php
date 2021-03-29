@@ -40,9 +40,9 @@
                         <li><a href="contato.php">Contato</a></li>
                     </ul>
                     <ul>
-                        <li><a href="solucao.php">App</a></li>
-                        <li><a href="solucao.php">Sistema WA</a></li>
-                        <li><a href="solucao.php">Sistema WP</a></li>
+                        <li><a href="app.php">App</a></li>
+                        <li><a href="web.php">Sistema WA</a></li>
+                        <li><a href="web.php">Sistema WP</a></li>
                     </ul>
                 </div>
                 <div class="space-20"></div>
