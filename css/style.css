@@ -1177,7 +1177,34 @@ a:hover, a:active {
         margin-left: 0;
     }
 }
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .tab-video {
+        text-align: center;
+        height: 602px;
+    }
+}
 @media only screen and (max-width: 1024px) {
+    .blog-grid .inner-post {
+        padding: 30px 15px !important;
+    }
+    .ot-heading h2 {
+        font-size: 40px !important;
+    }
+    .why-choose-us {
+        padding-bottom: 70px !important;
+    }
+    .ot-pricing-table .inner-table .title-table {
+        width: 75%;
+    }
+    .tab-video .ot-tabs .tabs-heading {
+        display: inline-flex;
+    }
+    .remove-mobile {
+        display: none !important;
+    }
+    .tech-box h5 {
+        font-size: 14px !important;
+    }
     .mobile-topbar {
         line-height: 1.875;
         padding: 7px 0;
@@ -1214,6 +1241,15 @@ a:hover, a:active {
     }
 }
 @media only screen and (max-width: 600px) {
+    .ot-counter {
+        text-align: center !important;
+    }
+    .tab-video {
+        height: 825px !important;
+    }
+    .tab-video .ot-tabs .tabs-heading {
+        display: inline-block;
+    }
     .topbar-info li {
         float: none;
         padding-left: 0;
@@ -1842,6 +1878,36 @@ a:hover, a:active {
         margin: 0 14px;
     }
 }
+@media (width: 1440px) {
+    .ot-counter2 {
+        padding: 0px 20px 90px !important;
+    }
+    .img-full {
+        height: auto !important;
+    }
+    .tab-video {
+        height: 484px;
+        padding: 0 !important;
+    }
+    .ot-tabs .tab-content {
+        padding: 15px 0 !important;
+    }
+}
+@media (width: 1280px) {
+    .ot-counter2 {
+        padding: 0px 20px 75px !important;
+    }
+    .img-full {
+        height: auto !important;
+    }
+    .ot-counter2 .s-num {
+        font-size: 43px !important;
+        margin-bottom: 10px !important;
+    }
+    .ot-counter2 .b-num {
+        font-size: 100px !important;
+    }
+}
 @media (max-width: 1440px) {
     .img-small .img-small-1 {
         left: 40% !important;
@@ -2087,6 +2153,9 @@ a:hover, a:active {
     .mobile_logo img {
         max-width: 230px;
         max-height: 47px;
+    }
+    .contact-info.box-style1 {
+        padding: 30px 10px 25px !important;
     }
 }
 /*--------------------------------------------------------------
@@ -2658,6 +2727,9 @@ a:hover, a:active {
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
 }
+.blog-post .share-post a.whatsapp {
+    background: #128c7e;
+}
 .blog-post .share-post a.face {
     background: #4661c5;
 }
@@ -2868,7 +2940,20 @@ a:hover, a:active {
 }
 @media only screen and (max-width: 768px) {
     .blog-post .author-bio .author-image {
-        display: none;
+        margin-right: 30px !important;
+    }
+    .contact-info.box-style2 {
+        font-size: 15px !important;
+    }
+    .tab-video {
+        text-align: center;
+        height: 602px;
+    }
+    .home-about-video {
+        box-shadow: none !important;
+    }
+    .pgrid .inner-post {
+        padding: 12px !important;
     }
     .blog-post .author-bio .author-info {
         padding: 20px 25px;
@@ -2880,6 +2965,9 @@ a:hover, a:active {
     }
 }
 @media only screen and (max-width: 600px) {
+    .blog-post .author-bio .author-image {
+        display: none;
+    }
     blockquote {
         font-size: 20px;
     }
@@ -4565,6 +4653,24 @@ object {
         font-size: 12px;
     }
 }
+@media only screen and (max-width: 667px) {
+    .ot-heading h2 {
+        font-size: 31px !important;
+    }
+    .ot-pricing-table .inner-table .title-table {
+        width: 70%;
+    }
+    .copyright-text {
+        text-align: center;
+    }
+    .logo-wd {
+        text-align: center;
+        float: none !important;
+    }
+    .footer-menu ul li {
+        display: block !important;
+    }
+}
 @media only screen and (max-width: 600px) {
     .portfolio-related-title-wrap h2 {
         font-size: 30px;
@@ -4606,8 +4712,22 @@ object {
 }
 
 @media only screen and (max-width: 991px) {
+    .why-choose-us .web {
+        text-align: center;
+    }
     .pgrid .post-box {
         margin-bottom: 30px;
+    }
+    .home-about-video {
+        box-shadow: none !important;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 800px) {
+    .pgrid .inner-post {
+        padding: 10px !important;
+    }
+    .contact-info.box-style2 {
+        font-size: 15px !important;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -5239,10 +5359,6 @@ object {
     .copyright-text.v2 {
         text-align: center;
     }
-    .logo-wd {
-        text-align: center;
-        float: none !important;
-    }
     .footer-menu ul li {
         display: grid !important;
         margin: 5px 0px !important;
@@ -5770,6 +5886,9 @@ object {
     }
 }
 @media only screen and (max-width: 479px) {
+    .page-pagination {
+        text-align: center;
+    }
     .ot-industries .indus-item {
         padding: 15px 30px 50px;
     }
@@ -5865,7 +5984,7 @@ div.swiper-pagination-custom, .swiper-pagination-fraction {
 }
 @media only screen and (max-width: 480px) {
     .wpcf7 .main-form {
-        padding: 30px;
+        padding: 15px;
     }
 
     .ot-tabs .tab-link {
@@ -7987,7 +8106,7 @@ section {
         text-align: center;
     }
     .section-consultation h2 {
-        font-size: 32px;
+        font-size: 30px;
         line-height: 42px;
     }
     .circle-progress {

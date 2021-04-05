@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
         <?php
         // CSS
@@ -74,7 +73,7 @@
                 <section class="service-web-video">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xl-5 col-lg-6">
+                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="tab-video">
                                     <div class="ot-heading">
                                         <span>// A Zabke</span>
@@ -103,7 +102,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="offset-xl-1 col-xl-6 col-lg-6 split-right-img">
+                            <div class="offset-xl-1 col-xl-6 col-lg-6 split-right-img remove-mobile">
                                 <img src="images/missao-visao-valores.jpg">
                             </div>
                         </div>

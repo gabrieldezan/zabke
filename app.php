@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
         <?php
         // CSS
@@ -244,7 +243,7 @@
                             <div class="col-md-12">
                                 <div class="ot-heading text-center">
                                     <span>// Nossos Clientes</span>
-                                    <h2 class="main-heading">O que nossos clientes<br/>dizem de nós</h2>
+                                    <h2 class="main-heading">O que nossos clientes <br/>dizem de nós</h2>
                                 </div>
                             </div>
                         </div>

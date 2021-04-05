@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
         <?php
         // CSS
@@ -312,7 +311,7 @@
                         <div class="space-40"></div>
                         <div class="post-grid pgrid">
                             <div class="row justify-content-center">
-                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="col-lg-4 col-md-4 col-sm-12">
                                     <article class="post-box blog-item">
                                         <div class="post-inner">
                                             <div class="entry-media">
@@ -334,7 +333,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="col-lg-4 col-md-4 col-sm-12">
                                     <article class="post-box blog-item">
                                         <div class="post-inner">
                                             <div class="entry-media">
@@ -358,7 +357,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="col-lg-4 col-md-4 col-sm-12">
                                     <article class="post-box blog-item">
                                         <div class="post-inner">
                                             <div class="entry-media">

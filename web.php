@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
         <?php
         // CSS
@@ -38,7 +37,7 @@
                 <section class="why-choose-us">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 web">
                                 <img src="images/web.png" alt="">
                             </div>
                             <div class="col-lg-6">
@@ -78,7 +77,7 @@
                             <div class=col-lg-12>
                                 <div class="s-counter4">
                                     <div class="row">
-                                        <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4 mb-lg-0">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 text-center mb-4 mb-lg-0">
                                             <div class="ot-counter text-white">
                                                 <div>
                                                     <span class="num" data-to="330" data-time="2000">0</span>
@@ -86,7 +85,7 @@
                                                 <h6 class="text-white">Projetos Concluídos</h6>                             
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4 mb-lg-0">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 text-center mb-4 mb-lg-0">
                                             <div class="ot-counter text-white">
                                                 <div>
                                                     <span class="num" data-to="100" data-time="2000">0</span>
@@ -94,7 +93,7 @@
                                                 <h6 class="text-white">Clientes Ativos</h6>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4 mb-sm-0">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 text-center mb-4 mb-sm-0">
                                             <div class="ot-counter text-white">
                                                 <div>
                                                     <span class="num" data-to="50" data-time="2000">0</span>
@@ -102,7 +101,7 @@
                                                 <h6 class="text-white">Profissionais Capacitados</h6>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                                             <div class="ot-counter text-white">
                                                 <div>
                                                     <span class="num" data-to="10" data-time="2000">0</span>
