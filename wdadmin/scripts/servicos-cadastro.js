@@ -174,6 +174,11 @@ $(document).ready(function () {
         limpa_form_video();
     });
 
+    /*BOTÃO NOVO*/
+    $("#botao_nova_chamada_teste").click(function (e) {
+        limpa_form_chamada_teste();
+    });
+
     /*SUBMETE FORM SOLUÇÕES*/
     $("#form_solucoes").on('submit', (function (e) {
 
@@ -329,6 +334,37 @@ $(document).ready(function () {
         return false;
     }));
 
+    /*SUBMETE FORM CHAMADA TESTE*/
+    $("#form_chamada_teste").on('submit', (function (e) {
+
+        Loading();
+
+        e.preventDefault();
+        $.ajax({
+            url: vsUrl + "controllers/SalvaDadosChamadaTeste.php",
+            type: "POST",
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                if (data > 0) {
+                    limpa_form_chamada_teste();
+                    consulta_chamada_teste();
+                    Sucesso();
+                } else {
+                    CloseLoading();
+                    Aviso();
+                }
+            },
+            error: function () {
+                CloseLoading();
+                Erro();
+            }
+        });
+        return false;
+    }));
+
     /*CHAMA FUNÇÃO PARA VERIFICAR EDIÇÃO OU CADASTRO*/
     verifica_edicao();
 
@@ -351,17 +387,20 @@ function verifica_edicao() {
         consulta_metricas();
         consulta_planos();
         consulta_video();
+        consulta_chamada_teste();
         $('ul li a[href="#solucoes"]').removeClass("disabled");
         $('ul li a[href="#diferenciais"]').removeClass("disabled");
         $('ul li a[href="#metricas"]').removeClass("disabled");
         $('ul li a[href="#planos"]').removeClass("disabled");
         $('ul li a[href="#video"]').removeClass("disabled");
+        $('ul li a[href="#chamada_teste"]').removeClass("disabled");
     } else {
         $('ul li a[href="#solucoes"]').addClass("disabled");
         $('ul li a[href="#diferenciais"]').addClass("disabled");
         $('ul li a[href="#metricas"]').addClass("disabled");
         $('ul li a[href="#planos"]').addClass("disabled");
         $('ul li a[href="#video"]').addClass("disabled");
+        $('ul li a[href="#chamada_teste"]').addClass("disabled");
         $("#botao_visualizar_manual").addClass('disabled');
         CloseLoading();
     }
@@ -598,6 +637,7 @@ function consulta_planos() {
         }
     });
 }
+
 /*CARREGA CORES DO PLANO*/
 function consulta_video() {
 
@@ -636,6 +676,56 @@ function consulta_video() {
                 $("#tabela_video tbody").append(
                         "<tr>" +
                         "<td align=\"center\" colspan=\"10\">Nenhum vídeo encontrado!</td>" +
+                        "</tr>"
+                        );
+                CloseLoading();
+            }
+        },
+        error: function () {
+            CloseLoading();
+            Erro();
+        }
+    });
+}
+
+/*CARREGA CORES DA SOLUÇÃO*/
+function consulta_chamada_teste() {
+
+    var viIdServicos = $("#hiddenIdServicos").val();
+
+    $.ajax({
+        url: vsUrl + "controllers/RetornaChamadaTeste.php",
+        type: "POST",
+        dataType: "json",
+        async: false,
+        data: ({
+            viIdServicos: viIdServicos
+        }),
+        success: function (data) {
+            if (data != 0) {
+
+                $("#tabela_chamada_teste tbody").html("");
+                for (i = 0; i < data.length; i++) {
+                    $("#tabela_chamada_teste tbody").append(
+                            "<tr>" +
+                            "<td>" + data[i].titulo + "</td>" +
+                            "<td>" + data[i].texto + "</td>" +
+                            "<td>" + data[i].link + "</td>" +
+                            "<td><img src='" + vsUrl + "uploads/chamada_teste/" + data[i].imagem + "' class='img-fluid' style='height:35px'></td>" +
+                            "<td align=\"center\">" +
+                            "<button type=\"button\" class=\"btn btn-secondary btn-sm\" onclick=\"edita_dados_chamada_teste(" + data[i].id_chamada_teste + ")\" data-toggle=\"tooltip\" data-placement=\"left\" title=\"Editar Chamada de teste " + data[i].titulo + "\"><i class=\"far fa-edit fa-fw\" aria-hidden=\"true\"></i></button>&nbsp;" +
+                            "<button type=\"button\" class=\"btn btn-danger btn-sm\" onclick=\"confirma_exclusao_registro(" + data[i].id_chamada_teste + ", 'chamada_teste', 'chamada_teste', '" + data[i].imagem + "', '', '', '', '');\" data-toggle=\"tooltip\" title=\"Remover " + data[i].titulo + "\"><i class=\"far fa-trash-alt fa-fw\" aria-hidden=\"true\"></i></button>" +
+                            "</td>" +
+                            "</tr>"
+                            );
+                    $('[data-toggle="tooltip"]').tooltip();
+                    CloseLoading();
+                }
+            } else {
+                $("#tabela_chamada_teste tbody").html("");
+                $("#tabela_chamada_teste tbody").append(
+                        "<tr>" +
+                        "<td align=\"center\" colspan=\"10\">Nenhuma chamada encontrada!</td>" +
                         "</tr>"
                         );
                 CloseLoading();
@@ -760,7 +850,7 @@ function edita_dados_plano(viIdPlanos) {
     });
 }
 
-/*CARREGA DADOS DO PLANO*/
+/*CARREGA DADOS DO VÍDEO*/
 function edita_dados_video(viIdVideo) {
 
     Loading();
@@ -780,6 +870,36 @@ function edita_dados_video(viIdVideo) {
             $("#inputImagemVideoAtual").val(data[0].imagem);
             $("#imgImagemVideoAtual").attr("src", vsUrl + "uploads/video/" + data[0].imagem);
             $("#inputLinkVideo").val(data[0].link);
+            CloseLoading();
+        },
+        error: function () {
+            CloseLoading();
+            Erro();
+        }
+    });
+}
+
+/*CARREGA DADOS DA CHAMADA SELECIONADA*/
+function edita_dados_chamada_teste(viIdChamadaTeste) {
+
+    Loading();
+
+    $.ajax({
+        url: vsUrl + "controllers/RetornaChamadaTesteSelecionado.php",
+        type: "POST",
+        dataType: "json",
+        data: ({
+            viIdChamadaTeste: viIdChamadaTeste
+        }),
+        success: function (data) {
+            limpa_form_metricas();
+            $("#inputIdChamadaTeste").val(viIdChamadaTeste);
+            $("#inputTituloChamadaTeste").val(data[0].titulo);
+            $("#inputImagemChamadaTesteAtual").val(data[0].imagem);
+            $("#imgImagemChamadaTesteAtual").attr("src", vsUrl + "uploads/chamada_teste/" + data[0].imagem);
+            $("#inputTextoChamadaTeste").val(data[0].texto);
+            $("#inputTextoBotaoChamadaTeste").val(data[0].texto_botao);
+            $("#inputLinkChamadaTeste").val(data[0].link);
             CloseLoading();
         },
         error: function () {
@@ -837,4 +957,16 @@ function limpa_form_video() {
     $("#inputImagemVideoAtual").val("");
     $("#imgImagemVideoAtual").attr("src", "");
     $("#inputLinkVideo").val("");
+}
+
+/*LIMPA FORMULÁRIO CHAMADA TESTE*/
+function limpa_form_chamada_teste() {
+    $(".dropify-clear").click();
+    $("#inputIdChamadaTeste").val("");
+    $("#inputTituloChamadaTeste").val("");
+    $("#inputImagemChamadaTesteAtual").val("");
+    $("#imgImagemChamadaTesteAtual").attr("src", "");
+    $("#inputTextoChamadaTeste").val("");
+    $("#inputTextoBotaoChamadaTeste").val("");
+    $("#inputLinkChamadaTeste").val("");
 }

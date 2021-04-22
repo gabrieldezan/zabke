@@ -196,6 +196,9 @@ if ($vrsQntServicoWeb > 0) {
                                         video
                                     WHERE
                                         id_servicos = $voResultadoServicoWeb->id_servicos
+                                    ORDER BY
+                                        id_video DESC
+                                    LIMIT 1
                                 ";
                                 $vrsExecutaVideo = mysqli_query($Conexao, $vsSqlVideo) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                                 while ($voResultadoVideo = mysqli_fetch_object($vrsExecutaVideo)) {
@@ -345,25 +348,28 @@ if ($vrsQntServicoWeb > 0) {
                         SELECT
                             titulo,
                             texto,
+                            texto_botao,
                             link,
                             imagem
                         FROM
-                            informacoes
+                            chamada_teste
                         WHERE
-                            id_conteudo_personalizado = 5 AND
-                            id_informacoes = 7
+                            id_servicos = $voResultadoServicoWeb->id_servicos
+                        ORDER BY
+                            id_chamada_teste DESC
+                        LIMIT 1
                     ";
                     $vrsExecutaTeste = mysqli_query($Conexao, $vsSqlTeste) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                     while ($voResultadoTeste = mysqli_fetch_object($vrsExecutaTeste)) {
                         ?>
-                        <section class="section-consultation" style="background-image: url(<?php echo URL . "wdadmin/uploads/informacoes/" . $voResultadoTeste->imagem ?>);">
+                        <section class="section-consultation" style="background-image: url(<?php echo URL . "wdadmin/uploads/chamada_teste/" . $voResultadoTeste->imagem ?>);">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <?php echo $voResultadoTeste->texto ?>
+                                        <p><?php echo $voResultadoTeste->texto ?></p>
                                         <h2><?php echo $voResultadoTeste->titulo ?></h2>
                                         <div class="ot-button">
-                                            <a href="<?php echo $voResultadoTeste->link ?>" target="_blank" class="octf-btn octf-btn-primary">Solicite um Teste</a>
+                                            <a href="<?php echo $voResultadoTeste->link ?>" target="_blank" class="octf-btn octf-btn-primary"><?php echo $voResultadoTeste->texto_botao ?></a>
                                         </div>
                                     </div>
                                 </div>

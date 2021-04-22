@@ -54,6 +54,12 @@
                                 <span class="hidden-xs-down"><i class="fab fa-youtube"></i>&nbsp;Vídeo</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#chamada_teste" role="tab">
+                                <span class="hidden-sm-up"><i class="fas fa-headset"></i></span>
+                                <span class="hidden-xs-down"><i class="fas fa-headset"></i>&nbsp;Chamada de teste</span>
+                            </a>
+                        </li>
                         <li class="botao_novo">
                             <a class="btn btn-info btn-sm" href="<?php echo URL ?>wdadmin/servicos/cadastro">
                                 <span class="hidden-sm-up"><i class="fas fa-plus" aria-hidden="true"></i></span>
@@ -276,7 +282,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label col-form-label-sm text-right">Imagem</label>
                                             <div class="col-sm-3">
-                                                <input type="hidden" id="inputImagemVideoAtual" name="inputImagemMetricasAtual" />
+                                                <input type="hidden" id="inputImagemMetricasAtual" name="inputImagemMetricasAtual" />
                                                 <img id="imgImagemMetricasAtual" name="imgImagemMetricasAtual" src="" class="img-fluid" />
                                             </div>
                                             <div class="col-sm-6">
@@ -410,6 +416,74 @@
                                             <div class="col-sm-12">
                                                 <button id="botao_salvar_video" type="submit" class="btn btn-success btn-sm"><i class="fas fa-save" aria-hidden="true"></i>&nbsp;Salvar</button>
                                                 <button id="botao_novo_video" type="button" class="btn btn-info btn-sm"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;Novo Vídeo</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane p-20" id="chamada_teste" role="tabpanel">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div>
+                                        <table id="tabela_chamada_teste" class="table table-sm table-hover table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Titulo</th>
+                                                    <th>Texto</th>
+                                                    <th>Link</th>
+                                                    <th>Imagem</th>
+                                                    <th>Ações</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <form id="form_chamada_teste" method="post" enctype="multipart/form-data">
+                                        <input type="hidden" id="inputIdChamadaTeste" name="inputIdChamadaTeste" value="" />
+                                        <input type="hidden" id="hiddenIdServicos" name="hiddenIdServicos" value="<?php echo $id ?>" />
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label col-form-label-sm text-right">Título *</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm" id="inputTituloChamadaTeste" name="inputTituloChamadaTeste" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label col-form-label-sm text-right">Texto *</label>
+                                            <div class="col-sm-9">
+                                                <textarea name="inputTextoChamadaTeste" id="inputTextoChamadaTeste" class="form-control form-control-sm" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label col-form-label-sm text-right">Texto Botão *</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm" id="inputTextoBotaoChamadaTeste" name="inputTextoBotaoChamadaTeste" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label col-form-label-sm text-right">Link *</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm" name="inputLinkChamadaTeste" id="inputLinkChamadaTeste" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label col-form-label-sm text-right">Imagem *</label>
+                                            <div class="col-sm-3">
+                                                <input type="hidden" id="inputImagemChamadaTesteAtual" name="inputImagemChamadaTesteAtual" required />
+                                                <img id="imgImagemChamadaTesteAtual" name="imgImagemChamadaTesteAtual" src="" class="img-fluid" />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="file" class="dropify" id="inputImagemChamadaTeste" name="inputImagemChamadaTeste" data-height="100" accept=".jpg, .jpeg" />
+                                                <small id="fileHelp" class="form-text text-muted">Deixe em branco para manter o arquivo atual.</small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row text-right">
+                                            <div class="col-sm-12">
+                                                <button id="botao_salvar_chamada_teste" type="submit" class="btn btn-success btn-sm"><i class="fas fa-save" aria-hidden="true"></i>&nbsp;Salvar</button>
+                                                <button id="botao_novo_chamada_teste" type="button" class="btn btn-info btn-sm"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;Novo Vídeo</button>
                                             </div>
                                         </div>
                                     </form>
