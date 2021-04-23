@@ -63,20 +63,16 @@
                     </ul>
                     <ul>
                         <?php
-                        $vsSqlServicos2 = "SELECT titulo, url_amigavel FROM servicos WHERE status = 1 AND layout = 1 ORDER BY titulo";
-                        $vrsExecutaServicos2 = mysqli_query($Conexao, $vsSqlServicos2) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
-                        while ($voResultadoServicos2 = mysqli_fetch_object($vrsExecutaServicos2)) {
+                        $vsSqlServicos = "SELECT titulo, layout, url_amigavel FROM servicos WHERE status = 1 ORDER BY posicao";
+                        $vrsExecutaServicos = mysqli_query($Conexao, $vsSqlServicos) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
+                        while ($voResultadoServicos = mysqli_fetch_object($vrsExecutaServicos)) {
                             ?>
-                            <li><a href="<?php echo URL . "app/" . $voResultadoServicos2->url_amigavel ?>"><?php echo $voResultadoServicos2->titulo ?></a></li>
-                            <?php
-                        }
-                        ?>
-                        <?php
-                        $vsSqlServicos1 = "SELECT titulo, url_amigavel FROM servicos WHERE status = 1 AND layout = 0 ORDER BY titulo";
-                        $vrsExecutaServicos1 = mysqli_query($Conexao, $vsSqlServicos1) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
-                        while ($voResultadoServicos1 = mysqli_fetch_object($vrsExecutaServicos1)) {
-                            ?>
-                            <li><a href="<?php echo URL . "web/" . $voResultadoServicos1->url_amigavel ?>"><?php echo $voResultadoServicos1->titulo ?></a></li>
+                            <?php if ($voResultadoServicos->layout == 1) { ?>
+                                <li><a href="<?php echo URL . "app/" . $voResultadoServicos->url_amigavel ?>"><?php echo $voResultadoServicos->titulo ?></a></li>
+                            <?php } ?>
+                            <?php if ($voResultadoServicos->layout == 0) { ?>
+                                <li><a href="<?php echo URL . "web/" . $voResultadoServicos->url_amigavel ?>"><?php echo $voResultadoServicos->titulo ?></a></li>
+                            <?php } ?>
                             <?php
                         }
                         ?>

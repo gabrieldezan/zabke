@@ -425,6 +425,7 @@ function edita_servicos(viIdServicos) {
                 $("#inputIcone").val(data[0].icone);
                 $("#inputImagemAtual").val(data[0].imagem);
                 $("#imgImagemAtual").attr("src", vsUrl + "uploads/servicos/" + data[0].imagem);
+                $("#inputPosicao").val(data[0].posicao);
                 $("#inputStatus").val(data[0].status);
                 $("#inputLayout").val(data[0].layout);
                 CloseLoading();

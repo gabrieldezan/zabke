@@ -142,30 +142,26 @@
                         <div class="space-15"></div>
                         <div class="row justify-content-center">
                             <?php
-                            $vsSqlServicos2 = "SELECT titulo, icone, url_amigavel FROM servicos WHERE status = 1 AND layout = 1 ORDER BY titulo";
-                            $vrsExecutaServicos2 = mysqli_query($Conexao, $vsSqlServicos2) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
-                            while ($voResultadoServicos2 = mysqli_fetch_object($vrsExecutaServicos2)) {
+                            $vsSqlServicos = "SELECT titulo, icone, posicao, layout, url_amigavel FROM servicos WHERE status = 1 ORDER BY posicao";
+                            $vrsExecutaServicos = mysqli_query($Conexao, $vsSqlServicos) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
+                            while ($voResultadoServicos = mysqli_fetch_object($vrsExecutaServicos)) {
                                 ?>
-                                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                                    <a class="tech-box text-center" href="<?php echo URL . "app/" . $voResultadoServicos2->url_amigavel ?>">
-                                        <div class="icon-main"><span class="<?php echo $voResultadoServicos2->icone ?>"></span></div>
-                                        <h5><?php echo $voResultadoServicos2->titulo ?></h5>
-                                    </a>
-                                </div>
-                                <?php
-                            }
-                            ?>
-                            <?php
-                            $vsSqlServicos1 = "SELECT titulo, icone, url_amigavel FROM servicos WHERE status = 1 AND layout = 0 ORDER BY titulo";
-                            $vrsExecutaServicos1 = mysqli_query($Conexao, $vsSqlServicos1) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
-                            while ($voResultadoServicos1 = mysqli_fetch_object($vrsExecutaServicos1)) {
-                                ?>
-                                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                                    <a class="tech-box text-center" href="<?php echo URL . "web/" . $voResultadoServicos1->url_amigavel ?>">
-                                        <div class="icon-main"><span class="<?php echo $voResultadoServicos1->icone ?>"></span></div>
-                                        <h5><?php echo $voResultadoServicos1->titulo ?></h5>
-                                    </a>
-                                </div>
+                                <?php if ($voResultadoServicos->layout == 1) { ?>
+                                    <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                                        <a class="tech-box text-center" href="<?php echo URL . "app/" . $voResultadoServicos->url_amigavel ?>">
+                                            <div class="icon-main"><span class="<?php echo $voResultadoServicos->icone ?>"></span></div>
+                                            <h5><?php echo $voResultadoServicos->titulo ?></h5>
+                                        </a>
+                                    </div>
+                                <?php } ?>
+                                <?php if ($voResultadoServicos->layout == 0) { ?>
+                                    <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                                        <a class="tech-box text-center" href="<?php echo URL . "web/" . $voResultadoServicos->url_amigavel ?>">
+                                            <div class="icon-main"><span class="<?php echo $voResultadoServicos->icone ?>"></span></div>
+                                            <h5><?php echo $voResultadoServicos->titulo ?></h5>
+                                        </a>
+                                    </div>
+                                <?php } ?>
                                 <?php
                             }
                             ?>

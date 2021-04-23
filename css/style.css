@@ -7234,7 +7234,7 @@ svg:not(:root) {
 }
 /* Why choose us */
 .why-choose-us {
-    padding-bottom: 0;
+    padding-bottom: 90px;
     padding-top: 85px;
 }
 .why-right {

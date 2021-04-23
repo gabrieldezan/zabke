@@ -89,7 +89,7 @@ if ($vrsQntServicoApp > 0) {
                                             </div>
                                             <div class="content-box">
                                                 <h5><?php echo $voResultadoDiferenciais1->descricao ?></h5>
-                                                <p>51% of smartphone users have discovered a new company or product.</p>
+                                                <p><?php echo $voResultadoDiferenciais1->texto ?></p>
                                             </div>
                                         </div>
                                         <?php

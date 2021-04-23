@@ -87,6 +87,7 @@ function carrega_servicos() {
                     "columns": [
                         {"data": "id_servicos"},
                         {"data": "titulo"},
+                        {"data": "posicao"},
                         {
                             "render": function (data, type, row) {
                                 return "<span class=\"label label-" + row.status_class + "\">" + row.status + "</span>";
@@ -104,11 +105,19 @@ function carrega_servicos() {
                             "className": "text-center"
                         },
                         {
+                            "targets": 1,
+                            "className": "text-center"
+                        },
+                        {
                             "targets": 2,
                             "className": "text-center"
                         },
                         {
                             "targets": 3,
+                            "className": "text-center"
+                        },
+                        {
+                            "targets": 4,
                             "className": "text-center"
                         }
                     ],

@@ -120,6 +120,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label col-form-label-sm text-right">Posição</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control form-control-sm" id="inputPosicao" name="inputPosicao">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-sm-3 col-form-label col-form-label-sm text-right">Status *</label>
                                     <div class="col-sm-8">
                                         <select class="form-control form-control-sm" id="inputStatus" name="inputStatus">

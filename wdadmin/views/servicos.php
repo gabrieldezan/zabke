@@ -21,6 +21,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Título</th>
+                                    <th>Posição</th>
                                     <th>Status</th>
                                     <th>Ações</th>
                                 </tr>

@@ -21,6 +21,7 @@ $Arquivos->setPasta("servicos");
 $Arquivos->insere_arquivo();
 $Servicos->setImagem($Arquivos->getRetorno_arquivo());
 $Servicos->setUrl_amigavel(url_amigavel($_POST['inputTitulo']));
+$Servicos->setPosicao($_POST['inputPosicao']);
 $Servicos->setStatus($_POST['inputStatus']);
 $Servicos->setLayout($_POST['inputLayout']);
 

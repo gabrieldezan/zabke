@@ -11,6 +11,7 @@ class Servicos extends Conexao {
     private $descricao;
     private $icone;
     private $imagem;
+    private $posicao;
     private $status;
     private $layout;
     private $url_amigavel;
@@ -31,10 +32,12 @@ class Servicos extends Conexao {
                         descricao,
                         icone,
                         imagem,
+                        posicao,
                         status,
                         layout,
                         url_amigavel
                     ) VALUES (
+                        ?,
                         ?,
                         ?,
                         ?,
@@ -51,6 +54,7 @@ class Servicos extends Conexao {
                     "$this->descricao",
                     "$this->icone",
                     "$this->imagem",
+                    "$this->posicao",
                     "$this->status",
                     "$this->layout",
                     "$this->url_amigavel"
@@ -64,6 +68,7 @@ class Servicos extends Conexao {
                         descricao = ?,
                         icone = ?,
                         imagem = ?,
+                        posicao = ?,
                         status = ?,
                         layout = ?,
                         url_amigavel = ?
@@ -76,6 +81,7 @@ class Servicos extends Conexao {
                     "$this->descricao",
                     "$this->icone",
                     "$this->imagem",
+                    "$this->posicao",
                     "$this->status",
                     "$this->layout",
                     "$this->url_amigavel",
@@ -101,6 +107,7 @@ class Servicos extends Conexao {
                 SELECT
                     id_servicos,
                     titulo,
+                    posicao,
                     CASE status
                         WHEN 1 THEN 'success'
                         WHEN 0 THEN 'danger'
@@ -139,6 +146,7 @@ class Servicos extends Conexao {
                     descricao,
                     icone,
                     imagem,
+                    posicao,
                     status,
                     layout,
                     url_amigavel
@@ -188,6 +196,10 @@ class Servicos extends Conexao {
         return $this->imagem;
     }
 
+    function getPosicao() {
+        return $this->posicao;
+    }
+
     function getStatus() {
         return $this->status;
     }
@@ -226,6 +238,10 @@ class Servicos extends Conexao {
 
     function setImagem($imagem) {
         $this->imagem = $imagem;
+    }
+
+    function setPosicao($posicao) {
+        $this->posicao = $posicao;
     }
 
     function setStatus($status) {
