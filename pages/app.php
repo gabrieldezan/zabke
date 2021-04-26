@@ -120,7 +120,7 @@ if ($vrsQntServicoApp > 0) {
                                     while ($voResultadoDiferenciais2 = mysqli_fetch_object($vrsExecutaDiferenciais2)) {
                                         ?>
                                         <div class="icon-box-s2 s1 app-benefits-right">
-                                            <div class="icon-main"><span class="flaticon-data-1"></span></div>
+                                            <div class="icon-main"><span class="<?php echo $voResultadoDiferenciais2->icone ?>"></span></div>
                                             <div class="content-box">
                                                 <h5><?php echo $voResultadoDiferenciais2->descricao ?></h5>
                                                 <p><?php echo $voResultadoDiferenciais2->texto ?></p>
@@ -205,7 +205,7 @@ if ($vrsQntServicoApp > 0) {
                                             <p><?php echo $voResultadoVideo->detalhes ?></p>
                                             <div class="video-popup style-2">
                                                 <div class="btn-inner">
-                                                    <a class="btn-play" href="<?php echo $voResultadoVideo->link ?>"><i class="flaticon-play"></i>
+                                                    <a class="btn-play" href="<?php echo $voResultadoVideo->link ?>"><i class="<?php echo $voResultadoVideo->icone ?>"></i>
                                                         <span class="circle-1"></span>
                                                         <span class="circle-2"></span>
                                                     </a>
