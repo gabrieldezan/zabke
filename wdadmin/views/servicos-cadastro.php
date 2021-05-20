@@ -100,6 +100,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label col-form-label-sm text-right">Título da seção Soluções</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control form-control-sm" id="inputTituloSecao" name="inputTituloSecao" placeholder="informe aqui o título da seção soluções..." />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-sm-3 col-form-label col-form-label-sm text-right">Imagem </label>
                                     <div class="col-sm-2">
                                         <input type="hidden" id="inputImagemAtual" name="inputImagemAtual" />
@@ -120,9 +126,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label col-form-label-sm text-right">Posição</label>
+                                    <label class="col-sm-3 col-form-label col-form-label-sm text-right">Posição *</label>
                                     <div class="col-sm-8">
-                                        <input type="number" class="form-control form-control-sm" id="inputPosicao" name="inputPosicao">
+                                        <input type="number" class="form-control form-control-sm" id="inputPosicao" name="inputPosicao" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -131,6 +137,15 @@
                                         <select class="form-control form-control-sm" id="inputStatus" name="inputStatus">
                                             <option value="1">Ativo</option>
                                             <option value="0">Inativo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label col-form-label-sm text-right">Possui plano pesonalizado *</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control form-control-sm" id="inputPlanoPersonalizadoSecao" name="inputPlanoPersonalizadoSecao">
+                                            <option value="1">Sim</option>
+                                            <option value="0">Não</option>
                                         </select>
                                     </div>
                                 </div>

@@ -420,6 +420,7 @@ function edita_servicos(viIdServicos) {
         success: function (data) {
             if (data !== 0) {
                 $("#inputTitulo").val(data[0].titulo);
+                $("#inputTituloSecao").val(data[0].titulo_secao);
                 $("#inputResumo").val(data[0].resumo);
                 $("#inputDescricao").val(data[0].descricao);
                 $("#inputIcone").val(data[0].icone);
@@ -428,6 +429,7 @@ function edita_servicos(viIdServicos) {
                 $("#inputPosicao").val(data[0].posicao);
                 $("#inputStatus").val(data[0].status);
                 $("#inputLayout").val(data[0].layout);
+                $("#inputPlanoPersonalizado").val(data[0].plano_personalizado);
                 CloseLoading();
             } else {
                 $("#inputIdServicos").val("");

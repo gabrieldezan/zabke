@@ -7,6 +7,7 @@ class Servicos extends Conexao {
 
     private $id_servicos;
     private $titulo;
+    private $titulo_secao;
     private $resumo;
     private $descricao;
     private $icone;
@@ -14,6 +15,7 @@ class Servicos extends Conexao {
     private $posicao;
     private $status;
     private $layout;
+    private $plano_personalizado;
     private $url_amigavel;
     private $retorno_dados;
 
@@ -28,6 +30,7 @@ class Servicos extends Conexao {
                 $salva_dados = $pdo->prepare('
                     INSERT INTO servicos (
                         titulo,
+                        titulo_secao,
                         resumo,
                         descricao,
                         icone,
@@ -35,8 +38,11 @@ class Servicos extends Conexao {
                         posicao,
                         status,
                         layout,
+                        plano_personalizado,
                         url_amigavel
                     ) VALUES (
+                        ?,
+                        ?,
                         ?,
                         ?,
                         ?,
@@ -50,6 +56,7 @@ class Servicos extends Conexao {
                 ');
                 $salva_dados->execute(array(
                     "$this->titulo",
+                    "$this->titulo_secao",
                     "$this->resumo",
                     "$this->descricao",
                     "$this->icone",
@@ -57,6 +64,7 @@ class Servicos extends Conexao {
                     "$this->posicao",
                     "$this->status",
                     "$this->layout",
+                    "$this->plano_personalizado",
                     "$this->url_amigavel"
                 ));
                 $this->setRetorno_dados($pdo->lastInsertId());
@@ -64,6 +72,7 @@ class Servicos extends Conexao {
                 $salva_dados = $pdo->prepare('
                     UPDATE servicos SET 
                         titulo = ?,
+                        titulo_secao = ?,
                         resumo = ?,
                         descricao = ?,
                         icone = ?,
@@ -71,12 +80,14 @@ class Servicos extends Conexao {
                         posicao = ?,
                         status = ?,
                         layout = ?,
+                        plano_personalizado = ?,
                         url_amigavel = ?
                     WHERE 
                         id_servicos = ?;
                 ');
                 $salva_dados->execute(array(
                     "$this->titulo",
+                    "$this->titulo_secao",
                     "$this->resumo",
                     "$this->descricao",
                     "$this->icone",
@@ -84,6 +95,7 @@ class Servicos extends Conexao {
                     "$this->posicao",
                     "$this->status",
                     "$this->layout",
+                    "$this->plano_personalizado",
                     "$this->url_amigavel",
                     "$this->id_servicos"
                 ));
@@ -142,6 +154,7 @@ class Servicos extends Conexao {
             $edita_dados = $pdo->prepare("
                 SELECT
                     titulo,
+                    titulo_secao,
                     resumo,
                     descricao,
                     icone,
@@ -149,6 +162,7 @@ class Servicos extends Conexao {
                     posicao,
                     status,
                     layout,
+                    plano_personalizado,
                     url_amigavel
                 FROM
                     servicos
@@ -180,6 +194,10 @@ class Servicos extends Conexao {
         return $this->titulo;
     }
 
+    function getTitulo_secao() {
+        return $this->titulo_secao;
+    }
+
     function getResumo() {
         return $this->resumo;
     }
@@ -208,6 +226,10 @@ class Servicos extends Conexao {
         return $this->layout;
     }
 
+    function getPlano_personalizado() {
+        return $this->plano_personalizado;
+    }
+
     function getUrl_amigavel() {
         return $this->url_amigavel;
     }
@@ -222,6 +244,10 @@ class Servicos extends Conexao {
 
     function setTitulo($titulo) {
         $this->titulo = $titulo;
+    }
+
+    function setTitulo_secao($titulo_secao) {
+        $this->titulo_secao = $titulo_secao;
     }
 
     function setResumo($resumo) {
@@ -250,6 +276,10 @@ class Servicos extends Conexao {
 
     function setLayout($layout) {
         $this->layout = $layout;
+    }
+
+    function setPlano_personalizado($plano_personalizado) {
+        $this->plano_personalizado = $plano_personalizado;
     }
 
     function setUrl_amigavel($url_amigavel) {
