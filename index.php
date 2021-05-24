@@ -48,6 +48,9 @@ if ($Url[0] == "" || $Url[0] == "home") {
 } else if ($Url[0] == "contato") {
     $pagina = "contato";
     $parametro = "";
+} else if ($Url[0] == "politica-de-privacidade") {
+    $pagina = "politica-de-privacidade";
+    $parametro = "";
 } else {
     $pagina = "404";
     $parametro = "";

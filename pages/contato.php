@@ -67,7 +67,7 @@
                                             $vrsExecutaEndereco = mysqli_query($Conexao, $vsSqlEndereco) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                                             while ($voResultadoEndereco = mysqli_fetch_object($vrsExecutaEndereco)) {
                                                 ?>
-                                                <p><a href="<?php echo $voResultadoEndereco->link ?>" target="_blank"><?php echo $voResultadoEndereco->endereco . " - " . $voResultadoEndereco->cidade . " - " . $voResultadoEndereco->estado ?></a></p>
+                                                <p><a href="<?php echo $voResultadoEndereco->link ?>" rel="noopener" target="_blank"><?php echo $voResultadoEndereco->endereco . " - " . $voResultadoEndereco->cidade . " - " . $voResultadoEndereco->estado ?></a></p>
                                                 <?php
                                             }
                                             ?>
@@ -97,7 +97,7 @@
                                             $vrsExecutaTelefones = mysqli_query($Conexao, $vsSqlTelefones) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                                             while ($voResultadoTelefones = mysqli_fetch_object($vrsExecutaTelefones)) {
                                                 ?>
-                                                <p><a href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a></p>
+                                                <p><a href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" rel="noopener" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a></p>
                                                 <?php
                                             }
                                             ?>
@@ -155,7 +155,7 @@
             ?>
 
         </div>
-        <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+        <a title="Voltar ao Topo" id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
 
         <?php
         // CSS
@@ -167,7 +167,7 @@
         <script src="<?php echo URL . "wdadmin/js/jquery.mask.min.js" ?>" rel="stylesheet"></script>
         <script src="<?php echo URL . "wdadmin/assets/plugins/sweetalert/sweetalert.min.js" ?>"></script>
         <link href="<?php echo URL . "wdadmin/assets/plugins/sweetalert/sweetalert.min.css" ?>" rel="stylesheet">
-        <script src="<?php echo URL . "wdadmin/js/contato.js" ?>"></script>
+        <script src="<?php echo URL . "wdadmin/js/contato.min.js" ?>"></script>
 
     </body>
 </html>

@@ -12,8 +12,8 @@
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="<?php echo $voResultadoConfiguracoes->titulo . " - Clientes" ?>"/>
         <meta property="og:description" content="<?php echo $voResultadoConfiguracoes->descricao ?>"/>
-        <meta property="og:image" content="<?php echo "https://" . $_SERVER['HTTP_HOST'] . URL . "Clientes" ?>"/>
-        <meta property="og:url" content="<?php echo "https://" . $_SERVER['HTTP_HOST'] . URL . "Clientes" ?>"/>
+        <meta property="og:image" content="<?php echo "https://" . $_SERVER['HTTP_HOST'] . URL . "clientes" ?>"/>
+        <meta property="og:url" content="<?php echo "https://" . $_SERVER['HTTP_HOST'] . URL . "clientes" ?>"/>
         <meta property="og:site_name" content="<?php echo $voResultadoConfiguracoes->nome_empresa ?>"/>
         <?php
         $vsSqlFacebook = "SELECT link FROM redes_sociais WHERE id_redes_sociais = 1";
@@ -58,23 +58,41 @@
                                         $vsSqlClientes = "SELECT descricao, imagem, link FROM clientes WHERE status = 1";
                                         $vrsExecutaClientes = mysqli_query($Conexao, $vsSqlClientes) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                                         while ($voResultadoClientes = mysqli_fetch_object($vrsExecutaClientes)) {
-                                            ?>
-                                            <div class="project-item">
-                                                <div class="projects-box">
-                                                    <div class="projects-thumbnail">
-                                                        <a href="<?php echo $voResultadoClientes->link ?>" target="_blank">
-                                                            <img src="<?php echo URL . "wdadmin/uploads/clientes/" . $voResultadoClientes->imagem ?>" title="<?php echo $voResultadoClientes->descricao ?>" alt="<?php echo $voResultadoClientes->descricao ?>">
-                                                        </a>
-                                                    </div>
-                                                    <div class="portfolio-info ">
-                                                        <a class="overlay" href="<?php echo $voResultadoClientes->link ?>" target="_blank"></a>                                
-                                                        <div class="portfolio-info-inner">
-                                                            <h5><a href="<?php echo $voResultadoClientes->link ?>" target="_blank"><?php echo $voResultadoClientes->descricao ?></a></h5>
+                                            if ($voResultadoClientes->link != null || !empty($voResultadoClientes->link)) {
+                                                ?>
+                                                <div class="project-item">
+                                                    <div class="projects-box">
+                                                        <div class="projects-thumbnail">
+                                                            <a href="<?php echo $voResultadoClientes->link ?>"rel="noopener" target="_blank">
+                                                                <img src="<?php echo URL . "wdadmin/uploads/clientes/" . $voResultadoClientes->imagem ?>" title="<?php echo $voResultadoClientes->descricao ?>" alt="<?php echo $voResultadoClientes->descricao ?>">
+                                                            </a>
+                                                        </div>
+                                                        <div class="portfolio-info ">
+                                                            <a class="overlay" href="<?php echo $voResultadoClientes->link ?>" rel="noopener" target="_blank"></a>                                
+                                                            <div class="portfolio-info-inner">
+                                                                <h5><a href="<?php echo $voResultadoClientes->link ?>" rel="noopener" target="_blank"><?php echo $voResultadoClientes->descricao ?></a></h5>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <?php
+                                            <?php } else { ?>
+                                                <div class="project-item">
+                                                    <div class="projects-box">
+                                                        <div class="projects-thumbnail">
+                                                            <a>
+                                                                <img src="<?php echo URL . "wdadmin/uploads/clientes/" . $voResultadoClientes->imagem ?>" title="<?php echo $voResultadoClientes->descricao ?>" alt="<?php echo $voResultadoClientes->descricao ?>">
+                                                            </a>
+                                                        </div>
+                                                        <div class="portfolio-info ">
+                                                            <a class="overlay"></a>                                
+                                                            <div class="portfolio-info-inner">
+                                                                <h5><?php echo $voResultadoClientes->descricao ?></h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php
+                                            }
                                         }
                                         ?>
                                     </div>
@@ -92,7 +110,7 @@
             ?>
 
         </div>
-        <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+        <a title="Voltar ao Topo" id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
 
         <?php
         // CSS

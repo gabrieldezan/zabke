@@ -39,7 +39,7 @@
 
                 <div class="container">
                     <div class="error-404 not-found text-center">
-                        <h2><img class="error-image" src="<?php echo URL . "images/404.png" ?>" title="404" alt="404"></h2>
+                        <h2><img class="error-image" src="<?php echo URL . "images/404.webp" ?>" title="404" alt="404"></h2>
                         <h1>Página Não Encontrada!</h1>
                         <div class="content-404">
                             <p>Oops! A página que você estava procurando não existe.</p>
@@ -56,7 +56,7 @@
             ?>
 
         </div>
-        <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+        <a title="Voltar ao Topo" id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
 
         <?php
         // CSS

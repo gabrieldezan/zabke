@@ -208,15 +208,25 @@
                                         $vsSqlClientes = "SELECT descricao, imagem, link FROM clientes WHERE status = 1";
                                         $vrsExecutaClientes = mysqli_query($Conexao, $vsSqlClientes) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                                         while ($voResultadoClientes = mysqli_fetch_object($vrsExecutaClientes)) {
-                                            ?>
-                                            <div class="partners-slide">
-                                                <a href="<?php echo $voResultadoClientes->link ?>" target="_blank" class="client-logo">
-                                                    <figure class="partners-slide-inner">
-                                                        <img class="partners-slide-image" src="<?php echo URL . "wdadmin/uploads/clientes/" . $voResultadoClientes->imagem ?>" title="<?php echo $voResultadoClientes->descricao ?>" alt="<?php echo $voResultadoClientes->descricao ?>">
-                                                    </figure>                             
-                                                </a>
-                                            </div>
-                                            <?php
+                                            if ($voResultadoClientes->link != null || !empty($voResultadoClientes->link)) {
+                                                ?>
+                                                <div class="partners-slide">
+                                                    <a href="<?php echo $voResultadoClientes->link ?>" rel="noopener" target="_blank" class="client-logo">
+                                                        <figure class="partners-slide-inner">
+                                                            <img class="partners-slide-image" src="<?php echo URL . "wdadmin/uploads/clientes/" . $voResultadoClientes->imagem ?>" title="<?php echo $voResultadoClientes->descricao ?>" alt="<?php echo $voResultadoClientes->descricao ?>">
+                                                        </figure>                             
+                                                    </a>
+                                                </div>
+                                            <?php } else { ?>
+                                                <div class="partners-slide">
+                                                    <a class="client-logo">
+                                                        <figure class="partners-slide-inner">
+                                                            <img class="partners-slide-image" src="<?php echo URL . "wdadmin/uploads/clientes/" . $voResultadoClientes->imagem ?>" title="<?php echo $voResultadoClientes->descricao ?>" alt="<?php echo $voResultadoClientes->descricao ?>">
+                                                        </figure>                             
+                                                    </a>
+                                                </div>
+                                                <?php
+                                            }
                                         }
                                         ?>
                                     </div>
@@ -271,7 +281,7 @@
                                             <div class="post-inner">
                                                 <div class="entry-media">
                                                     <a href="<?php echo URL . "post/" . $voResultadoBlogHome->url_amigavel ?>">
-                                                        <img src="<?php echo URL . "wdadmin/uploads/blog_postagens/" . $voResultadoBlogHome->imagem ?>" alt="">
+                                                        <img src="<?php echo URL . "wdadmin/uploads/blog_postagens/" . $voResultadoBlogHome->imagem ?>" title="<?php echo $voResultadoBlogHome->titulo ?>" alt="<?php echo $voResultadoBlogHome->titulo ?>">
                                                     </a>
                                                 </div>
                                                 <div class="inner-post">
@@ -304,7 +314,7 @@
             ?>
 
         </div>
-        <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+        <a title="Voltar ao Topo" id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
 
         <?php
         // CSS

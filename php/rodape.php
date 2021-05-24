@@ -1,3 +1,12 @@
+<div class="cookie-container">
+    <center>
+        Para sua segurança, atualizamos nossa <a href="<?php echo URL . "politica-de-privacidade" ?>" target="_blank">política de privacidade</a>. Ao continuar navegando, entendemos que você está ciente e de acordo com elas.&nbsp;
+        <button class="cookie-btn">
+            Aceitar
+        </button>
+    </center>
+</div>
+
 <footer id="site-footer" class="site-footer footer-v2">
     <div class="container">
         <div class="row">
@@ -15,7 +24,7 @@
                     $vrsExecutaEndereco = mysqli_query($Conexao, $vsSqlEndereco) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                     while ($voResultadoEndereco = mysqli_fetch_object($vrsExecutaEndereco)) {
                         ?>
-                        <p><a href="<?php echo $voResultadoEndereco->link ?>" target="_blank"><?php echo $voResultadoEndereco->endereco . " - " . $voResultadoEndereco->cidade . " - " . $voResultadoEndereco->estado ?></a></p>
+                        <p><a href="<?php echo $voResultadoEndereco->link ?>" rel="noopener" target="_blank"><?php echo $voResultadoEndereco->endereco . " - " . $voResultadoEndereco->cidade . " - " . $voResultadoEndereco->estado ?></a></p>
                         <?php
                     }
                     ?>
@@ -43,7 +52,7 @@
                     $vrsExecutaTelefones = mysqli_query($Conexao, $vsSqlTelefones) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                     while ($voResultadoTelefones = mysqli_fetch_object($vrsExecutaTelefones)) {
                         ?>
-                        <p><a href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a></p>
+                        <p><a href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" rel="noopener" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a></p>
                         <?php
                     }
                     ?>
@@ -86,19 +95,19 @@
                     $vrsExecutaRedesSociais = mysqli_query($Conexao, $vsSqlRedesSociais) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                     while ($voResultadoRedesSociais = mysqli_fetch_object($vrsExecutaRedesSociais)) {
                         ?>
-                        <a class="<?php echo $voResultadoRedesSociais->titulo ?>" href="<?php echo $voResultadoRedesSociais->link ?>" target="_blank"><i class="<?php echo $voResultadoRedesSociais->icone ?>"></i></a>
+                        <a title="<?php echo $voResultadoRedesSociais->titulo ?>" class="<?php echo $voResultadoRedesSociais->titulo ?>" href="<?php echo $voResultadoRedesSociais->link ?>" rel="noopener" target="_blank"><i class="<?php echo $voResultadoRedesSociais->icone ?>"></i></a>
                         <?php
                     }
                     ?>
                 </div>
             </div>
             <div class="col-md-6">
-                <p class="copyright-text v2"><b><?php echo $voResultadoConfiguracoes->nome_empresa ?></b>. Todos direitos reservados.</p>
+                <p class="copyright-text v2"><b><?php echo $voResultadoConfiguracoes->nome_empresa ?></b>. Todos direitos reservados. <a target="_blank" href="<?php echo URL . "politica-de-privacidade" ?>" target="_blank">Política de Privacidade</a>.</p>
             </div>
             <div class="col-md-6">
                 <div class="logo-wd">
-                    <a href="https://webdezan.com.br" target="_blank">
-                        <img src="<?php echo URL . "images/logo-wd.png" ?>" title="Web Dezan - Agência Digital" alt="Web Dezan - Agência Digital">
+                    <a href="https://webdezan.com.br" rel="noopener" target="_blank">
+                        <img src="<?php echo URL . "images/logo-wd.webp" ?>" title="Web Dezan - Agência Digital" alt="Web Dezan - Agência Digital">
                     </a>
                 </div>
             </div>

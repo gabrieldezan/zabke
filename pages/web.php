@@ -37,7 +37,7 @@ if ($vrsQntServicoWeb > 0) {
             <meta name="googlebot" content="index, follow" />
             <meta property="og:type" content="website"/>
             <meta property="og:title" content="<?php echo $voResultadoConfiguracoes->titulo . " - " . $voResultadoServicoWeb->titulo ?>"/>
-            <meta property="og:description" content="<?php echo $voResultadoConfiguracoes->descricao ?>"/>
+            <meta property="og:description" content="<?php echo $voResultadoServicoWeb->resumo ?>"/>
             <meta property="og:image" content="<?php echo "https://" . $_SERVER['HTTP_HOST'] . URL . "wdadmin/uploads/servicos/" . $voResultadoServicoWeb->imagem ?>"/>
             <meta property="og:url" content="<?php echo "https://" . $_SERVER['HTTP_HOST'] . URL . "web/" . $parametro ?>"/>
             <meta property="og:site_name" content="<?php echo $voResultadoConfiguracoes->nome_empresa ?>"/>
@@ -385,7 +385,7 @@ if ($vrsQntServicoWeb > 0) {
                                         <p><?php echo $voResultadoTeste->texto ?></p>
                                         <h2><?php echo $voResultadoTeste->titulo ?></h2>
                                         <div class="ot-button">
-                                            <a href="<?php echo $voResultadoTeste->link ?>" target="_blank" class="octf-btn octf-btn-primary"><?php echo $voResultadoTeste->texto_botao ?></a>
+                                            <a href="<?php echo $voResultadoTeste->link ?>" rel="noopener" target="_blank" class="octf-btn octf-btn-primary"><?php echo $voResultadoTeste->texto_botao ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -403,7 +403,7 @@ if ($vrsQntServicoWeb > 0) {
                 ?>
 
             </div>
-            <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+            <a title="Voltar ao Topo" id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
 
             <?php
             // CSS

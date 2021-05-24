@@ -172,7 +172,7 @@
                                         while ($voResultadoClientes = mysqli_fetch_object($vrsExecutaClientes)) {
                                             ?>
                                             <div class="partners-slide">
-                                                <a href="<?php echo $voResultadoClientes->link ?>" target="_blank" class="client-logo">
+                                                <a href="<?php echo $voResultadoClientes->link ?>" rel="noopener" target="_blank" class="client-logo">
                                                     <figure class="partners-slide-inner">
                                                         <img class="partners-slide-image" src="<?php echo URL . "wdadmin/uploads/clientes/" . $voResultadoClientes->imagem ?>" title="<?php echo $voResultadoClientes->descricao ?>" alt="<?php echo $voResultadoClientes->descricao ?>">
                                                     </figure>                             
@@ -195,7 +195,7 @@
             ?>
 
         </div>
-        <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+        <a title="Voltar ao Topo" id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
 
         <?php
         // CSS

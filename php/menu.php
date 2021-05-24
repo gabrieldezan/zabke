@@ -33,7 +33,7 @@
                                 $vrsExecutaRedesSociais = mysqli_query($Conexao, $vsSqlRedesSociais) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                                 while ($voResultadoRedesSociais = mysqli_fetch_object($vrsExecutaRedesSociais)) {
                                     ?>
-                                    <li><a class="<?php echo $voResultadoRedesSociais->titulo ?>" href="<?php echo $voResultadoRedesSociais->link ?>" target="_blank"><i class="<?php echo $voResultadoRedesSociais->icone ?>"></i></a></li>
+                                    <li><a title="<?php echo $voResultadoRedesSociais->titulo ?>" class="<?php echo $voResultadoRedesSociais->titulo ?>" href="<?php echo $voResultadoRedesSociais->link ?>" rel="noopener" target="_blank"><i class="<?php echo $voResultadoRedesSociais->icone ?>"></i></a></li>
                                     <?php
                                 }
                                 ?>
@@ -116,7 +116,7 @@
                                             while ($voResultadoTelefones = mysqli_fetch_object($vrsExecutaTelefones)) {
                                                 ?>
                                                 <span class="main-text">
-                                                    <a href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a>
+                                                    <a href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" rel="noopener" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a>
                                                 </span>
                                                 <?php
                                             }
@@ -147,7 +147,7 @@
                     </a>
                 </div>
                 <div id="mmenu_toggle">
-                    <button></button>
+                    <button title="Menu"></button>
                 </div>
             </div>
             <div class="mmenu_wrapper">

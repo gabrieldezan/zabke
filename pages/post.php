@@ -104,47 +104,6 @@ if ($vrsQntPostagem > 0) {
                                             <a class="twit" href="<?php echo "http://twitter.com/share?url=https://" . $_SERVER['HTTP_HOST'] . URL . "post/" . $parametro ?>&title=<?php echo $voResultadoPostagem->titulo ?>" onclick="window.open(this.href, 'windowName', 'width=600, height=400, left=24, top=24, scrollbars, resizable'); return false;" rel="nofollow" target="blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                                             <a class="pint" href="<?php echo "http://pinterest.com/pin/create/button/?url=https://" . $_SERVER['HTTP_HOST'] . URL . "post/" . $parametro ?>&amp;media=<?php echo URL . "wdadmin/uploads/blog_postagens/" . $voResultadoPostagem->imagem ?>&amp;description=<?php echo substr(strip_tags(trim($voResultadoPostagem->texto)), 0, strrpos(substr(strip_tags(trim($voResultadoPostagem->texto)), 0, 140), ' ')) . '...'; ?>" onclick="window.open(this.href, 'windowName', 'width=600, height=400, left=24, top=24, scrollbars, resizable'); return false;" rel="nofollow" target="blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                                         </div>
-                                        <?php /*
-                                          <div class="author-bio">
-                                          <div class="author-image">
-                                          <img src="images/autor.jpg" alt="Tom Black" class="avatar">
-                                          </div>
-                                          <div class="author-info">
-                                          <p class="title text-primary font-second">Autor</p>
-                                          <h6>Tom Black</h6>
-                                          <p class="des">He is attended the State University of New York at Oswego where he majored in English Literature and Creative Writing.</p>
-                                          <div class="author-socials">
-                                          <a href="facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> </a>
-                                          <a href="instagram.com" target="_blank"><i class="fab fa-instagram"></i> </a>
-                                          <a href="linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> </a>
-                                          </div>
-                                          </div>
-                                          </div>
-                                          <div class="post-nav clearfix">
-                                          <div class="post-prev">
-                                          <a href="post.php">
-                                          <div class="thumb">
-                                          <img src="images/post-autor1.jpg" alt="">
-                                          </div>
-                                          <div class="entry-header">
-                                          <h6>Does Magento Shared  Hosting Suit You?</h6>
-                                          <span class="post-on"><span class="entry-date">10:00 16/03/2021</span></span>
-                                          </div>
-                                          </a>
-                                          </div>
-                                          <div class="post-next">
-                                          <a href="post.php">
-                                          <div class="thumb">
-                                          <img src="images/post-autor2.jpg" alt="">
-                                          </div>
-                                          <div class="entry-header">
-                                          <h6>Plan Your Project  with Your Software</h6>
-                                          <span class="post-on"><span class="entry-date">10:00 16/03/2021</span></span>
-                                          </div>
-                                          </a>
-                                          </div>
-                                          </div>
-                                         */ ?>
                                         <div class="post-relate">
                                             <h2>Posts Relacionados</h2>
                                             <div class="row">
@@ -233,7 +192,7 @@ if ($vrsQntPostagem > 0) {
                                             ?>
                                             <li class="clearfix">
                                                 <div class="thumb">
-                                                    <a href="<?php echo URL . "post/" . $voResultadoUltimosPosts->url_amigavel ?>"><img src="<?php echo URL . "wdadmin/uploads/blog_postagens/" . $voResultadoUltimosPosts->imagem ?>" alt=""></a>
+                                                    <a href="<?php echo URL . "post/" . $voResultadoUltimosPosts->url_amigavel ?>"><img src="<?php echo URL . "wdadmin/uploads/blog_postagens/" . $voResultadoUltimosPosts->imagem ?>" title="<?php echo $voResultadoUltimosPosts->titulo ?>" alt="<?php echo $voResultadoUltimosPosts->titulo ?>"></a>
                                                 </div>
                                                 <div class="entry-header">
                                                     <h6><a href="<?php echo URL . "post/" . $voResultadoUltimosPosts->url_amigavel ?>"><?php echo $voResultadoUltimosPosts->titulo ?></a></h6>
@@ -256,7 +215,7 @@ if ($vrsQntPostagem > 0) {
                 ?>
 
             </div>
-            <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+            <a title="Voltar ao Topo" id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
 
             <?php
             // CSS

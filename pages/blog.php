@@ -174,7 +174,7 @@ if ($pagina < 0) {
                     ?>
 
                 </div>
-                <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+                <a title="Voltar ao Topo" id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
 
                 <?php
                 // CSS
@@ -188,4 +188,4 @@ if ($pagina < 0) {
         </html>
         <?php
     }
-}    
+}
