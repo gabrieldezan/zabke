@@ -2665,8 +2665,19 @@ a:hover, a:active {
     margin-bottom: 15px;
 }
 .blog-post > .inner-post .entry-summary {
+    font-size: 15px;
     text-align: justify;
     padding-bottom: 50px;
+}
+.blog-post > .inner-post .entry-summary p,
+.blog-post > .inner-post .entry-summary span,
+.blog-post > .inner-post .entry-summary h1,
+.blog-post > .inner-post .entry-summary h2,
+.blog-post > .inner-post .entry-summary h3,
+.blog-post > .inner-post .entry-summary h4,
+.blog-post > .inner-post .entry-summary h5,
+.blog-post > .inner-post .entry-summary h6 {
+    font-family: Montserrat,sans-serif !important;
 }
 .blog-post.format-audio .post-cat, .blog-post.format-quote .post-cat, .blog-post.format-link .post-cat, .blog-post.format-standard:not(.has-post-thumbnail) .post-cat {
     left: 0;

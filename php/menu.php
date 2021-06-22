@@ -157,9 +157,20 @@
                         <li><a href="<?php echo URL . "a-zabke" ?>">A Zabke</a></li>
                         <li class="menu-item-has-children"><a class="cursor-pointer">Soluções</a>
                             <ul class="sub-menu">
-                                <li><a href="<?php echo URL . "app" ?>">App</a></li>
-                                <li><a href="<?php echo URL . "web" ?>">Sistema WA</a></li>
-                                <li><a href="<?php echo URL . "web" ?>">Sistema WP</a></li>
+                                <?php
+                                $vsSqlServicosMobile = "SELECT titulo, layout, url_amigavel FROM servicos WHERE status = 1 ORDER BY posicao";
+                                $vrsExecutaServicosMobile = mysqli_query($Conexao, $vsSqlServicosMobile) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
+                                while ($voResultadoServicosMobile = mysqli_fetch_object($vrsExecutaServicosMobile)) {
+                                    ?>
+                                    <?php if ($voResultadoServicosMobile->layout == 1) { ?>
+                                        <li><a href="<?php echo URL . "app/" . $voResultadoServicosMobile->url_amigavel ?>"><?php echo $voResultadoServicosMobile->titulo ?></a></li>
+                                    <?php } ?>
+                                    <?php if ($voResultadoServicosMobile->layout == 0) { ?>
+                                        <li><a href="<?php echo URL . "web/" . $voResultadoServicosMobile->url_amigavel ?>"><?php echo $voResultadoServicosMobile->titulo ?></a></li>
+                                    <?php } ?>
+                                    <?php
+                                }
+                                ?>
                             </ul>
                         </li>
                         <li><a href="<?php echo URL . "clientes" ?>">Clientes</a></li>
