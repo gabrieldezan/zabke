@@ -36,3 +36,11 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=781746725841653&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
+<!-- Global site tag (gtag.js) - Google Ads: 351217042 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-351217042"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-351217042');
+</script>

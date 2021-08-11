@@ -164,6 +164,11 @@
         // SCRIPT
         include 'php/script.php';
         ?>
+        <!-- Event snippet for Contato conversion page -->
+        <script>
+            gtag('event', 'conversion', {'send_to': 'AW-351217042/0b1ACI2F7uYCEJLLvKcB'});
+        </script>
+
         <script src="<?php echo URL . "wdadmin/js/jquery.mask.min.js" ?>" rel="stylesheet"></script>
         <script src="<?php echo URL . "wdadmin/assets/plugins/sweetalert/sweetalert.min.js" ?>"></script>
         <link href="<?php echo URL . "wdadmin/assets/plugins/sweetalert/sweetalert.min.css" ?>" rel="stylesheet">
