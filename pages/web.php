@@ -385,7 +385,7 @@ if ($vrsQntServicoWeb > 0) {
                                         <p><?php echo $voResultadoTeste->texto ?></p>
                                         <h2><?php echo $voResultadoTeste->titulo ?></h2>
                                         <div class="ot-button">
-                                            <a href="<?php echo $voResultadoTeste->link ?>" rel="noopener" target="_blank" class="octf-btn octf-btn-primary"><?php echo $voResultadoTeste->texto_botao ?></a>
+                                            <a id="faca_um_teste" href="<?php echo $voResultadoTeste->link ?>" onclick="solicitar_teste_conversion('<?php echo $voResultadoTeste->link ?>')" rel="noopener" target="_blank" class="octf-btn octf-btn-primary"><?php echo $voResultadoTeste->texto_botao ?></a>
                                         </div>
                                     </div>
                                 </div>

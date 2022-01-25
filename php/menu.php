@@ -1,3 +1,8 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLXK5PH"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <header id="site-header" class="site-header header-style-2 header-fullwidth sticky-header header-static">
     <div class="header-topbar">
         <div class="octf-area-wrap">
@@ -10,7 +15,7 @@
                             $vrsExecutaEmails = mysqli_query($Conexao, $vsSqlEmails) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                             while ($voResultadoEmails = mysqli_fetch_object($vrsExecutaEmails)) {
                                 ?>
-                                <li><i class="fas fa-envelope"></i><a href="<?php echo "mailto:" . $voResultadoEmails->link ?>"> <?php echo $voResultadoEmails->link ?></a></li>
+                                <li><i class="fas fa-envelope"></i><a class="email" target="_blank" href="<?php echo "mailto:" . $voResultadoEmails->link ?>"> <?php echo $voResultadoEmails->link ?></a></li>
                                 <?php
                             }
                             ?>
@@ -116,7 +121,7 @@
                                             while ($voResultadoTelefones = mysqli_fetch_object($vrsExecutaTelefones)) {
                                                 ?>
                                                 <span class="main-text">
-                                                    <a href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" rel="noopener" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a>
+                                                    <a class="whatsapp" href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" onclick="whatsapp_conversion('<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>')" rel="noopener" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a>
                                                 </span>
                                                 <?php
                                             }

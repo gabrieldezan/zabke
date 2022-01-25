@@ -82,7 +82,7 @@
                                             $vrsExecutaEmails = mysqli_query($Conexao, $vsSqlEmails) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                                             while ($voResultadoEmails = mysqli_fetch_object($vrsExecutaEmails)) {
                                                 ?>
-                                                <p><a href="<?php echo "mailto:" . $voResultadoEmails->link ?>"> <?php echo $voResultadoEmails->link ?></a></p>
+                                                <p><a class="email" target="_blank" href="<?php echo "mailto:" . $voResultadoEmails->link ?>"> <?php echo $voResultadoEmails->link ?></a></p>
                                                 <?php
                                             }
                                             ?>
@@ -97,7 +97,7 @@
                                             $vrsExecutaTelefones = mysqli_query($Conexao, $vsSqlTelefones) or die("Erro ao efetuar a operação no banco de dados! <br> Arquivo:" . __FILE__ . "<br>Linha:" . __LINE__ . "<br>Erro:" . mysqli_error($Conexao));
                                             while ($voResultadoTelefones = mysqli_fetch_object($vrsExecutaTelefones)) {
                                                 ?>
-                                                <p><a href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" rel="noopener" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a></p>
+                                                <p><a class="whatsapp" href="<?php echo "https://api.whatsapp.com/send?l=pt_BR&phone=55" . str_replace(array("(", ")", "-", " "), "", $voResultadoTelefones->link) ?>" rel="noopener" target="_blank"><?php echo $voResultadoTelefones->link . " - " . $voResultadoTelefones->titulo ?></a></p>
                                                 <?php
                                             }
                                             ?>
@@ -128,7 +128,7 @@
                                             <textarea name="vsMensagem" id="vsMensagem" placeholder="Mensagem" required></textarea>
                                         </p>
                                         <p>
-                                            <button id="botao_enviar_mensagem" class="octf-btn octf-btn-light" type="submit">Enviar Mensagem</button>
+                                            <button id="botao_enviar_mensagem" class="octf-btn octf-btn-light" type="submit" onclick="formulario_conversion()">Enviar Mensagem</button>
                                         </p>
                                     </div>
                                 </form>
@@ -164,10 +164,6 @@
         // SCRIPT
         include 'php/script.php';
         ?>
-        <!-- Event snippet for Contato conversion page -->
-        <script>
-            gtag('event', 'conversion', {'send_to': 'AW-351217042/0b1ACI2F7uYCEJLLvKcB'});
-        </script>
 
         <script src="<?php echo URL . "wdadmin/js/jquery.mask.min.js" ?>" rel="stylesheet"></script>
         <script src="<?php echo URL . "wdadmin/assets/plugins/sweetalert/sweetalert.min.js" ?>"></script>
