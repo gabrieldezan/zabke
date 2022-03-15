@@ -28,8 +28,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TLXK5PH');</script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","AW-351217042");</script>
-<?php /*Event snippet for Enviar formulário de lead conversion page*/ ?>
-<script>function formulario_conversion(n){return gtag("event","conversion",{send_to:"AW-351217042/z3FnCKaKoYgDEJLLvKcB",event_callback:function(){void 0!==n&&(window.location=n)}}),!1}</script>
 <?php /*Event snippet for WhatsApp conversion page*/ ?>
 <script>function whatsapp_conversion(n){return gtag("event","conversion",{send_to:"AW-351217042/ak3vCNvL1ogDEJLLvKcB",event_callback:function(){void 0!==n&&(window.open=n)}}),!1}</script>
 <?php /*Event snippet for Solicitar Teste conversion page*/ ?>
